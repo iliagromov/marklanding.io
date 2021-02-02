@@ -1,0 +1,184 @@
+.page{
+    &__title{
+        &-h1{
+            font-family: @fontRegular;
+            font-style: normal;
+            font-weight: 600;
+            // font-size: 75px;
+            font-size: 4vw;
+            line-height: 121.18%; // 91px or 9vh;
+            letter-spacing: -0.01em;
+
+            color: @color_white;
+        }
+        &-h2{
+            font-family: @fontBold;
+            font-weight: bold;
+            // font-size: 144px;
+            font-size: 7.5vw;
+            line-height: 121.18%;
+            /* identical to box height, or 175px */
+            
+            letter-spacing: -0.025em;
+            text-transform: uppercase;
+        }
+        &-h3{
+            font-family: @fontBold;
+            font-weight: bold;
+            // font-size: 42px;
+            font-size: 2.2vw;
+            line-height: 121.18%;
+            /* identical to box height, or 51px */
+
+            // letter-spacing: -0.005em;
+            // letter-spacing: 1.5px;
+            letter-spacing: -0.005em;
+        }
+        &-h4{
+            font-family: @fontBold;
+            font-weight: bold;
+            // font-size: 18px;
+            font-size: .95vw;
+            line-height: 148.9%;
+            /* or 27px */
+            letter-spacing: -0.01em;
+
+        }
+
+
+    }
+    &__subtitle{
+        font-family: @fontRegular;
+        font-weight: 100;
+        // font-size: 32px;
+        // line-height: 44px;
+        font-size: 1.7vw;
+        line-height: 136%;
+        color:@color_blueDark;
+    }
+    &__text{
+        font-family: @fontRegular;
+        font-size: 18px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 148.9%; // 27px
+        letter-spacing: -0.01em;
+        color: @color_white;
+    }
+    &__link{
+        font-weight: normal;
+        font-size: 0.9vw;
+        display: flex;
+        align-items: center;
+        // font-size: 16px;
+        line-height: 121.18%;
+        /* or 19px */
+        color: @color_lightGreen;
+        letter-spacing: -0.005em;
+        &_arrow{
+            &-green,
+            &-gray{
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    vertical-align: bottom;
+                    margin-left: 12px;
+                }
+            }
+            &-green{
+                &::after{
+                    .sprite(@icon-arrow-green);
+                }
+            }
+            &-gray{
+                &::after{
+                    .sprite(@icon-arrow-gray);
+                }
+            }
+        }
+        &:hover{
+            text-decoration: underline;
+          }
+        &_phone,
+        &_fax{
+            &::before{
+                content: '';
+                display: inline-block;
+                left:0;
+                margin-right: 9px;
+            }
+        }
+        &_phone{
+            &::before{
+                .sprite(@icon-telephone);
+            }
+        }
+        &_fax{
+            &::before{
+                .sprite(@icon-fax);
+            }
+        }
+    }
+    &__btn{
+        border: none;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:@color_blueDark3F;
+        &:active{
+            background-color:@color_blue;
+        }
+        &_play{
+
+        }
+    }
+    &__icon{
+        &_arrow{
+            &-white{
+                .sprite(@icon-arrow-white);
+            }
+        }
+        &_tw{
+            .sprite(@icon-twitter);
+        }
+        &_fb{
+            .sprite(@icon-facebook);
+        }
+        &_inst{
+            .sprite(@icon-instagram);
+        }
+        &_in{
+            .sprite(@icon-linkedin);
+        }
+        &_play{
+            .sprite(@icon-play);
+        }
+    }
+    &_bold {
+        font-weight: bold;
+        font-family: @fontBold;
+    }
+    &_bg{
+        &-opacity{
+            &-blueDark{
+                background-color: @color_blueDark;
+            }
+            &-lightBlue{
+                background-color: @color_lightBlue;
+            }
+        }
+    }
+    &_address{
+        &::before{
+            content: '';
+            .sprite(@icon-placeholder);
+            min-width: 20px;
+            margin-right: 9px;
+        }
+    }
+    &_hidden{
+        display: none !important; 
+    }
+}

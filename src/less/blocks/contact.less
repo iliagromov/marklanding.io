@@ -1,0 +1,115 @@
+.contact{
+    position: relative;
+    z-index: 1;
+   
+    display: flex;
+    &_bg{
+        
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        // filter: invert(1);
+        background-position: 0px -80px;
+        background-size: 23%;
+        background-repeat: no-repeat;
+        background-image: url(../assets/img/img-bg-r.png);
+    }
+    &-content{
+        position: relative;
+        display: flex;
+        padding: 5% 0 5% 0%;    
+        .size(12);
+        .shift-left(3);
+        .page__title-h2,
+        .page__text,
+        .page__link,
+        .page__title-h4{
+            color: @color_blueDark;
+        }
+        &__text{
+            .size(7);
+            .page__title-h2{
+                font-family: '@{OpenSans}-Semibold';
+                // font-size: 75px;
+                font-size: 4vw;
+                letter-spacing: -0.05em;
+                line-height: 98.68%;
+                text-transform: none;
+                margin-bottom: 6%;
+            }
+            .page__text{
+                .size(7);
+                font-size: 14px;
+                line-height: 148.9%;
+                margin-bottom: 8%;
+            }
+            .page__link{
+                &::after{
+                    margin-left: 18px;
+                }
+            }
+        }
+        &__info{
+            // .size(3);
+            padding: 2% 0 0 0;
+            box-sizing: border-box;
+            .page__title-h4{
+                // width: calc(38% - 0px);
+                margin-bottom: 25px;
+                font-size: 18px;
+            }
+            .page_address{
+                .size(5.8);
+            }
+            .page__link{
+                .size(12);
+            }
+            .page_address{
+                .page__text{
+                    font-size: 1vw;
+                }
+            }
+           
+            .page_address,
+            .page__link{
+               
+                display: flex;
+                // font-size: 18px;
+                font-size: 1vw;
+                line-height: 148.9%;
+                /* identical to box height, or 27px */
+                letter-spacing: -0.01em;
+                margin-bottom: 4%;
+            }
+
+        }
+    }
+    &-map{
+        // flex-basis: 36%;
+        .size(6);
+        display: flex;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &.animated{
+        .follow-img_bg{
+            .size(3);
+        }
+        .page__title-h2,
+        .page__title-h4,
+        .page__text,
+        .page_address,
+        .page__link{
+            .animated({
+                .fadeIn();
+                .delay(.5s);
+            });
+        }
+    }
+    
+}

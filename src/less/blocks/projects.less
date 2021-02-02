@@ -1,0 +1,147 @@
+.projects{
+    position: relative;
+    z-index: 10;
+    &-items{
+        .row-flex();
+        position: relative;
+        &__item{
+            //fixme px
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            .size(3);
+
+            // height: 480px;
+            // height: 47vh;
+
+            // width: 480px;
+            
+            // margin-bottom: -6px;
+           
+            &:hover{
+                .page__img{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+                .page__title-h3,
+                .page__link{
+                    transform: translateY(0);
+                }
+                .page__link{
+                    opacity: 1;
+                }
+            }
+            .page__img{
+             
+                &-bg{
+                    position: relative;
+                    display: flex;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        transition: all 0.5s ease-out;
+                        object-fit: cover;
+
+                    }
+                }
+            }
+            .page_bg-opacity-blueDark{
+                // position: absolute;
+                // height: 100%;
+                // width: 100%;
+                // opacity: 0;
+            }
+            &-main{
+              
+                .projects-items__item-content{
+                    .page__title-h3,
+                    .page__text{
+                        color: @color_blueDark;
+                        
+                    }
+                    .page__title-h3{
+                        font-family:  '@{OpenSans}-Semibold';
+                        font-weight: 600;
+                        // font-size: 75px;
+                        // line-height: 74px;
+                        font-size: 4vw;
+                        line-height: 98.68%;
+                        letter-spacing: -0.025em;
+                        margin-bottom: 45px;
+                    }
+                    .page__text{
+                 
+                        .size(6.1);
+                        font-family:  '@{OpenSans}-Regular';
+                        font-size: 0.95vw;
+                        padding-left: 2.5%;
+                    }
+                }
+                &:first-child{
+                    .projects-items__item-content{
+                        .page__title-h3{
+                            transform: translateY(0);
+                        }
+                    }
+                  
+                }
+                &:last-child{
+                    background-color: @color_lightGreen;
+                    .projects-items__item-content{
+                        .page__title-h3{
+                            // font-size: 42px;
+                            font-size: 2.2vw;
+                            line-height: 121.18%;
+                            letter-spacing: 1.5px;
+                            margin-bottom: 18px;
+                            
+                        }
+                        .page__title-h3,
+                        .page__link{
+                            color: @color_blueDark;
+                        }
+                    }
+                }
+                .projects-items__item-content{
+                    padding: 16% 11%;
+                }
+                
+            }
+            &-content{
+                position: absolute;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                // padding: 75px 60px;
+                padding: 16% 13%;
+                box-sizing: border-box;
+                .page__title-h3{
+                    color: @color_white;
+                    margin-bottom: 16px;
+                    transform: translateY(60px);
+                    transition: all 0.5s ease-out;
+                }
+                .page__link{
+                    display: flex;
+                    opacity: 0;
+                    align-items: center;
+                    transform: translateY(500px);
+                    transition: all 0.5s ease-out;
+                }
+               
+            }
+        }
+    }
+    &.animated{
+        .projects-items__item{
+            .animated({
+                .fadeIn();
+                .delay(0.5s);
+            });
+        }
+    }
+}
