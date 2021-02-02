@@ -223,6 +223,13 @@ img {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'), url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'OpenSansHebrew-Regular';
   -webkit-transition: all 0.5s ease-out;
