@@ -362,7 +362,7 @@ video {
   font-family: 'Roboto-Black';
   font-style: normal;
   font-weight: 900;
-  font-size: 70px;
+  font-size: 3.6vw;
   line-height: 121.18%;
   letter-spacing: -0.025em;
   color: #ffffff;
@@ -371,7 +371,7 @@ video {
 .page__title-h2 {
   font-family: 'OpenSansHebrew-Bold';
   font-weight: bold;
-  font-size: 96px;
+  font-size: 5vw;
   line-height: 121.18%;
   /* identical to box height, or 175px */
   letter-spacing: -0.025em;
@@ -384,7 +384,7 @@ video {
   /* identical to box height, or 51px */
   letter-spacing: -0.005em;
   font-weight: 900;
-  font-size: 48px;
+  font-size: 2.5vw;
   line-height: 121.18%;
   /* or 58px */
   letter-spacing: -0.025em;
@@ -402,7 +402,7 @@ video {
 .page__subtitle {
   font-family: 'Roboto-Regular';
   font-weight: 100;
-  font-size: 36px;
+  font-size: 1.9vw;
   line-height: 148.9%;
   /* or 54px */
   letter-spacing: -0.01em;
@@ -471,7 +471,7 @@ video {
   color: #ffffff;
   background: #121212;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.2vw;
   line-height: 148.9%;
 }
 
@@ -536,10 +536,10 @@ video {
 }
 
 .header .header__title {
-  width: calc(49.16666666666667% - 0px);
+  width: calc(50% - 0px);
   font-family: 'Roboto-Black';
   font-weight: 900;
-  font-size: 38px;
+  font-size: 1.9vw;
   line-height: 121.18%;
   letter-spacing: -0.025em;
   position: relative;
@@ -559,7 +559,7 @@ video {
           flex-direction: column;
   -webkit-box-pack: center;
           justify-content: center;
-  width: 148px;
+  width: 42.5%;
   height: 148px;
 }
 
@@ -571,15 +571,15 @@ video {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  width: 56.24px;
-  height: 9.37px;
+  width: 38%;
+  height: 6.5%;
   border-radius: 4px;
   margin-bottom: 7.4px;
   background-color: #ffffff;
 }
 
 .header__menu .line:nth-child(2n) {
-  width: 69.56px;
+  width: 47%;
 }
 
 .banner {
@@ -764,8 +764,8 @@ video {
 
 .about__content .page__text {
   color: #383838;
-  font-size: 24px;
-  line-height: 33px;
+  font-size: 1.3vw;
+  line-height: 135%;
   margin-bottom: 4%;
   /* or 27px */
 }
@@ -906,6 +906,8 @@ video {
 .contact-form .page__form .page__label {
   width: calc(50% - 0px);
   margin-bottom: 4%;
+  font-size: 0.8vw;
+  line-height: 100%;
   color: #ffffff;
   display: -webkit-box;
   display: flex;
@@ -949,8 +951,8 @@ video {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 0.8vw;
+  line-height: 150%;
   margin: 0;
 }
 
@@ -976,19 +978,17 @@ video {
 
 .contact-form .page__form .page__input {
   color: #ffffff;
-  width: 276px;
   height: 60px;
   margin-top: 5.5%;
   padding: 0px 0 0 18px;
   box-sizing: border-box;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 1vw;
+  line-height: 100%;
 }
 
 .contact-form .page__form .page__textarea {
   color: #ffffff;
-  width: 582px;
   height: 120px;
   margin-top: 2.5%;
 }
@@ -1038,6 +1038,11 @@ video {
 
 .projects-items__item:nth-child(4) {
   width: calc(50% - 0px);
+}
+
+.projects-items__item:nth-child(4) .page__img-bg img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .projects-items__item:nth-child(4) .projects-items__item-content {
@@ -1091,7 +1096,7 @@ video {
   width: calc(65% - 0px);
   font-family: 'OpenSans-Bold';
   font-weight: 600;
-  font-size: 64px;
+  font-size: 3.3vw;
   line-height: 100%;
   letter-spacing: -0.025em;
   margin-bottom: 7px;
@@ -1125,10 +1130,9 @@ video {
   width: calc(100% - 0px);
   text-transform: inherit;
   font-family: 'OpenSansHebrew-Regular';
-  font-size: 2.2vw;
   letter-spacing: 1.5px;
   font-weight: bold;
-  font-size: 42px;
+  font-size: 2.2vw;
   line-height: 121.18%;
 }
 
@@ -1179,6 +1183,7 @@ video {
   font-family: 'OpenSansHebrew-Regular';
   color: #ffffff;
   margin-bottom: 16px;
+  font-size: 2.1vw;
   -webkit-transform: translateY(60px);
           transform: translateY(60px);
   -webkit-transition: all 0.5s ease-out;
@@ -1244,9 +1249,20 @@ video {
   color: #ffffff;
   font-weight: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1vw;
   line-height: 148.9%;
   letter-spacing: -0.01em;
+}
+
+@media screen and (max-width: 1440px) {
+  .header__menu {
+    height: 111px;
+  }
+
+  .contact-form {
+    padding-left: 0;
+    padding-right: 6%;
+  }
 }
 
 @media screen and (max-width: 920px) {

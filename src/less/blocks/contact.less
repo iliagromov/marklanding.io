@@ -33,12 +33,18 @@
         .size(6);
         padding-top: 5%;
         padding-left: 6%;
+        .mmd-block({
+            padding-left: 0;
+            padding-right: 6%;
+        });
         box-sizing: border-box;
         .page__form{
             .row-flex();
             .page__label{
                 .size(6);
                 margin-bottom: 4%;
+                font-size: .8vw;
+                line-height: 100%;  
                 &:nth-child(2){
                     padding-left: 2%;
                     box-sizing: border-box;
@@ -69,8 +75,9 @@
                             color: @color_white;
                             display: flex;
                             align-items: center;
-                            font-size: 16px;
-                            line-height: 24px;
+                            // font-size: 16px;
+                            font-size: 0.8vw;
+                            line-height:150%;
                             margin: 0;
                         }
                         label:before {
@@ -96,18 +103,18 @@
             }
             .page__input{
                 color: @color_white;
-                width: 276px;
+            
                 height: 60px;
                 margin-top: 5.5%; 
                 padding: 0px 0 0 18px;
                 box-sizing: border-box;
                 font-weight: bold;
-                font-size: 12px;
-                line-height: 14px;  
+                // font-size: 12px;
+                font-size: 1vw;
+                line-height: 100%;  
             }
             .page__textarea{
                 color: @color_white;
-                width: 582px;
                 height: 120px;
                 margin-top: 2.5%;
                 
