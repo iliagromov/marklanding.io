@@ -1,0 +1,20 @@
+section.contact
+    .wrapper
+        .contact-block
+            .contact-text
+                h2.page__title-h2 Contact
+                p.page__subtitle Want to get in touch? 
+                    span.page_bold Let's talk!
+            .contact-form
+                form.page__form(action="")
+                    label.page__label Full Name*
+                        input.page__input(type='text' placeholder="Full Name" required)
+                    label.page__label Email:
+                        input.page__input(type='email' placeholder="Email" required)
+                    label.page__label.page__label_textarea Question
+                        textarea.page__textarea(name="textarea" placeholder="Message")
+                    button.page__btn Send
+                    .page__label_checkbox
+                        input#checkbox.page-input-checkbox(type="checkbox" required)
+                        label.page-label(for='checkbox')  I am agree....
+            

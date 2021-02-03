@@ -1,0 +1,25 @@
+mixin item(imgBg, title)
+    .projects-items__item
+        .page__img.page__img-bg
+            img(src=imgBg, alt="")
+        .page_bg-opacity-blueDark
+        .projects-items__item-content
+            h3.page__title-h3=title
+            a.page__link.page__link_arrow-green(href="javascript:void(0)") Link to Website
+section.projects.isAnimate
+    .projects-items
+        .projects-items__item.projects-items__item-main
+            .projects-items__item-content
+                h3.page__title-h3 My latest projects
+        +item("assets/img/img-project-1.png", 'JOBMAP')
+        +item("assets/img/img-project-2.png", 'ScreenTrack')
+        +item("assets/img/img-project-3.png", 'CONSULTIFY')
+        .projects-items__item.projects-items__item-main
+            .projects-items__item-content
+                h3.page__title-h3 Check out my latest episodes:
+                .page__links
+                    a.page__link(href="javascript:void(0)")
+                        .page__icon.page__icon_in
+                    a.page__link(href="javascript:void(0)")
+                        .page__icon.page__icon_youtube
+                a.page__link.page__link_arrow-gray(href="javascript:void(0)") 

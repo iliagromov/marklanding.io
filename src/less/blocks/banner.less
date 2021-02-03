@@ -1,0 +1,95 @@
+.banner{
+    .row-flex();
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &__content{
+        position: relative;
+        .size(5.4);
+        height: 100%;
+        &-text{
+            .size(12);
+           
+            // background-color: @color_grayDark;
+            position: relative;
+            height: 100%;
+            // padding: 174px 0 0 170px;
+            padding: 8% 0 12% 27%;
+            box-sizing: border-box;
+            //fixme margin padding
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            .page__title-h1{
+                align-self: flex-end;
+                margin-bottom: 6%;
+                .size(12);
+                // margin: 38% 0 5%;
+                // .size(20);
+            }
+            .page__text{
+                .size(8);
+                align-self: flex-start;
+               
+                font-family: '@{Roboto}-Regular';
+
+                font-size: 36px;
+                line-height: 148.9%;
+                letter-spacing: -0.01em;
+                
+                // width: 67%;
+                margin-bottom: -6%;
+                
+                padding-left: 5px;
+                box-sizing: border-box;
+            }
+        }
+        &_bg{
+            position: absolute;
+            height: 100%;
+            transition: all 1s ease-out;
+            &-grayLight{
+                .size(7);
+                right:0;
+                background-color: @color_grayLight;
+            }
+            &-grayDark{
+                .size(6.5);
+                background-color: @color_grayDark;
+            }
+        }
+    }
+    &__bg{
+        
+        .size(9.1);
+        .shift-left(-2.5);
+        .shift-right(-1);
+        .shift-padding-left(3.2);
+        padding-top: 1%;
+        background-image: url('../assets/img/img-banner-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        box-sizing: border-box;
+        .page__img{
+            position: relative;
+            // width: 55%;
+            img{   
+                position: relative;
+                z-index: 10;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 90%;
+                height: 90%;
+                top: 20%;
+                left: 20%;
+                background-color: @color_grayDark;
+            }
+        }
+        // background-position: -25px -15px;
+    }
+}

@@ -1,0 +1,125 @@
+.contact{
+    background-color: @color_grayDark;
+    padding: 110px 0;
+    .wrapper{
+        max-width: 1322px;
+    }
+    &-block{
+        .row-flex();
+        
+    }
+    
+    &-text{
+        .size(6);
+        padding-top: 2.8%;
+        padding-left: 4.5%;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: flex-start;
+
+        // align-items: center;
+        .page__title-h2,
+        .page__subtitle {
+            
+            color: @color_white;
+        }
+        .page__subtitle{
+            .size(8);
+            padding-top: 5.8%;
+        }
+    }
+    &-form{
+        .size(6);
+        padding-top: 5%;
+        padding-left: 6%;
+        box-sizing: border-box;
+        .page__form{
+            .row-flex();
+            .page__label{
+                .size(6);
+                margin-bottom: 4%;
+                &:nth-child(2){
+                    padding-left: 2%;
+                    box-sizing: border-box;
+                }
+                color: @color_white;
+                display: flex;
+                flex-direction: column;
+                &_textarea{
+                    .size(12);
+                }
+                &_checkbox{
+                   
+                    margin-top: 3%;
+                    align-items: center;
+                    display: flex;
+                        .page-input-checkbox{
+                            cursor: pointer;
+                            position: absolute !important; 
+                            clip: rect(1px, 1px, 1px, 1px); 
+                            padding: 0 !important; 
+                            border: 0 !important; 
+                            height: 1px !important; 
+                            width: 1px !important; 
+                            overflow: hidden;
+                        }
+                        label{
+                            cursor: pointer;
+                            color: @color_white;
+                            display: flex;
+                            align-items: center;
+                            font-size: 16px;
+                            line-height: 24px;
+                            margin: 0;
+                        }
+                        label:before {
+                            content: ''; 
+                            width: 10px; 
+                            height: 10px; 
+                        
+                            background: transparent; 
+                            border: 1px solid #fff; 
+                            display: inline-block; 
+                            margin-right: 16px;
+                        }
+                        input[type="checkbox"]:checked ~ label:before {
+                            background: #fff;
+                        }
+                    
+                }
+            } 
+            .page__input,
+            .page__textarea{
+                background-color: transparent;
+                border: 2px solid  #B0B0B0;
+            }
+            .page__input{
+                color: @color_white;
+                width: 276px;
+                height: 60px;
+                margin-top: 5.5%; 
+                padding: 0px 0 0 18px;
+                box-sizing: border-box;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 14px;  
+            }
+            .page__textarea{
+                color: @color_white;
+                width: 582px;
+                height: 120px;
+                margin-top: 2.5%;
+                
+            }
+            .page__btn{
+                .size(3.3);
+                height: 63px;
+                margin-top: 3%;
+                margin-right: 4%;
+                color:@color_grayDark;
+                background-color: @color_white;
+            }
+        }
+    }
+}

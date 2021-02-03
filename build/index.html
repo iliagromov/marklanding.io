@@ -5,11 +5,123 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 		<title>Mark Landing</title>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
 	</head>
 	<body>
+		<header class="header">
+			<div class="header__menu"><span class="line"></span><span class="line"></span><span class="line"></span><span class="line"></span><span class="line"></span></div>
+			<div class="header__title">Journey To One Billion</div>
+		</header>
 		<main class="page">
-			<section class="banner"></section>
+			<section class="banner">
+				<div class="banner__content">
+					<div class="banner__content_bg banner__content_bg-grayDark"></div>
+					<div class="banner__content_bg banner__content_bg-grayLight"></div>
+					<div class="banner__content-text">
+						<h1 class="page__title-h1">Mark (Marat) Bruk</h1>
+						<p class="page__text">Follow me on my journey to One Billion Dollars</p>
+					</div>
+				</div>
+				<div class="banner__bg">
+					<div class="page__img"><img src="/assets/img/img-banner.png" alt=""></div>
+				</div>
+			</section>
+			<section class="about isAnimate">
+				<div class="about__media">
+					<div class="page_bg-opacity-grayDark"></div><img class="page__img" src="assets/img/img-about-1.png" alt="">
+				</div>
+				<div class="about__content">
+					<div class="about__content-text">
+						<div class="page__text">I made my first 1 cent online back in 1998 - since then, I've employed 170+ software engineers and managed more than 20 projects - I've raised more than $750k for my start-up JobMap in a pre-seed round. </div>
+						<div class="page__text">Watch my journey towards a Billion Dollars as I share my knowledge and hidden startup experiences with the world.</div>
+					</div>
+				</div>
+				<div class="about__content about__content_end">
+					<div class="about__content-text">
+						<h3 class="page__title-h3">Follow me <br> on YouTube & LinkedIn:</h3>
+						<p class="page__subtitle">My personal jorney to <span class="page_bold">One Billion Dollars</span></p>
+						<button class="page__btn">Watch</button>
+					</div>
+				</div>
+				<div class="about__media">
+					<div class="page__video">
+						<video src="" poster="assets/img/img-about-video-prev.png"></video>
+						<button class="page__btn page__btn_play">
+							<div class="page__icon_play"></div>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="contact">
+				<div class="wrapper">
+					<div class="contact-block">
+						<div class="contact-text">
+							<h2 class="page__title-h2">Contact</h2>
+							<p class="page__subtitle">Want to get in touch? <span class="page_bold">Let's talk!</span></p>
+						</div>
+						<div class="contact-form">
+							<form class="page__form" action="">
+								<label class="page__label">Full Name*
+									<input class="page__input" type="text" placeholder="Full Name" required>
+								</label>
+								<label class="page__label">Email:
+									<input class="page__input" type="email" placeholder="Email" required>
+								</label>
+								<label class="page__label page__label_textarea">Question
+									<textarea class="page__textarea" name="textarea" placeholder="Message"></textarea>
+								</label>
+								<button class="page__btn">Send</button>
+								<div class="page__label_checkbox">
+									<input class="page-input-checkbox" id="checkbox" type="checkbox" required>
+									<label class="page-label" for="checkbox"> I am agree....</label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="projects isAnimate">
+				<div class="projects-items">
+					<div class="projects-items__item projects-items__item-main">
+						<div class="projects-items__item-content">
+							<h3 class="page__title-h3">My latest projects</h3>
+						</div>
+					</div>
+								<div class="projects-items__item">
+									<div class="page__img page__img-bg"><img src="assets/img/img-project-1.png" alt=""></div>
+									<div class="page_bg-opacity-blueDark"></div>
+									<div class="projects-items__item-content">
+										<h3 class="page__title-h3">JOBMAP</h3><a class="page__link page__link_arrow-green" href="javascript:void(0)">Link to Website</a>
+									</div>
+								</div>
+								<div class="projects-items__item">
+									<div class="page__img page__img-bg"><img src="assets/img/img-project-2.png" alt=""></div>
+									<div class="page_bg-opacity-blueDark"></div>
+									<div class="projects-items__item-content">
+										<h3 class="page__title-h3">ScreenTrack</h3><a class="page__link page__link_arrow-green" href="javascript:void(0)">Link to Website</a>
+									</div>
+								</div>
+								<div class="projects-items__item">
+									<div class="page__img page__img-bg"><img src="assets/img/img-project-3.png" alt=""></div>
+									<div class="page_bg-opacity-blueDark"></div>
+									<div class="projects-items__item-content">
+										<h3 class="page__title-h3">CONSULTIFY</h3><a class="page__link page__link_arrow-green" href="javascript:void(0)">Link to Website</a>
+									</div>
+								</div>
+					<div class="projects-items__item projects-items__item-main">
+						<div class="projects-items__item-content">
+							<h3 class="page__title-h3">Check out my latest episodes:</h3>
+							<div class="page__links"><a class="page__link" href="javascript:void(0)">
+									<div class="page__icon page__icon_in"></div></a><a class="page__link" href="javascript:void(0)">
+									<div class="page__icon page__icon_youtube"></div></a></div><a class="page__link page__link_arrow-gray" href="javascript:void(0)"> </a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+		<section class="footer">
+			<div class="copyright">Journey To One Billion | LetsBrandify.com</div>
+		</section>
 		<script src="js/debug-grid-create.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/animations.js"></script>
