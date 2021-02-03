@@ -524,7 +524,7 @@ video {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 1000;
   display: -webkit-box;
