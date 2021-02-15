@@ -10,12 +10,16 @@ module.exports = {
         mmd:{
             width: "1440px",
         },
-		md: {
+        md:{
+            width: "1024px",
+            fields: "15px"
+        },
+		mdd: {
             width: "920px",
             fields: "15px"
         },
         sm: {
-            width: "720px"
+            width: "768px"
         },
         xs: {
             width: "576px"

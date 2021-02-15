@@ -6,6 +6,7 @@
         position: relative;
         // display: flex;
         .size(6);
+        .size-sm(12);
         .page__img,
         .page__video video{
             width: 100%;
@@ -40,60 +41,72 @@
     }
     &__content{
         .size(6);
+        .size-sm(12);
         display: flex;
         align-items: center;
+        order: 0;
         // justify-content: center;
         &_end{
             justify-content: flex-end;
+            .sm(order, 1);
             .about__content-text{
                 .size(7.5);
+                .size-md(12);
                 padding: 3% 9% 0% 0%;
+                .md(  padding, 5% );
             }
         }
         .page__subtitle{
-            // padding: 0% 20%;
-            // or
             .size(9);
-            // padding-top: 4%;
             padding: 5% 0px;
         }
         &-text{
             color: @color_grayDark3;
-            // padding: 0% 16%;
             padding: 0 24% 0% 14%;
             box-sizing: border-box;
+            .sm(padding, 5%);
         }
         .page__text{
             color: @color_grayDark3;
-            // font-size: 24px;
-            // line-height: 33px;
             font-size: 1.3vw;
+            .sm(font-size, 1.3vw * 2);
+            .xs(font-size, 1.3vw * 4);
             line-height: 135%;
-     
             margin-bottom: 4%;
-            // font-size: 14px;
-            // font-size: 0.8vw;
-            // line-height: 196.4%;
-            /* or 27px */
         }
         .page__btn{
+            .md-block({
+                height: 4.394737vh;
+            });
+            .xs-block({
+                width: 100%;
+                font-size:1.8vw *3;
+                height: 9.394737vh;
+            });
         }
     }
     &.animated{
-        .page_bg-opacity-grayDark{
-            .size(5.8);
-        }
-        .page__subtitle{
-            .animated({
+        .from(@break_md, {
+            .page_bg-opacity-grayDark{
+                .size(5.8);
+            }
+            .about__content-text{
+                .page__text{
+                    .animated({
+                        .fadeInRight();
+                    },2s);
+                }
                
-                .fadeInRight();
-            });
-        }
-        .about__content-text{
-            .animated({
-                .fadeInLeft();
-                .delay(0.5s);
-            });
-        }
+            }
+            .about__content_end{
+                .about__content-text{
+                    .animated({
+                        .fadeInLeft();
+                        .delay(0.5s);
+                    },2s);
+                }
+            }
+        });
+        
     }
 }

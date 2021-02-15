@@ -2,14 +2,16 @@
 @atom: (100% / @columns);
 
 @break_mmd: 1440px;
-@break_md: 920px;
-@break_sm: 720px;
+@break_md: 1024px;
+@break_mdd: 920px;
+@break_sm: 768px;
 @break_xs: 576px;
 @break_xxs: 420px;
 
 @offset: 3.1%;
 @offset_mmd: @offset;
 @offset_md: @offset;
+@offset_mdd: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
 @offset_xxs: @offset;
@@ -17,12 +19,14 @@
 @offset_one_side: (@offset / 2);
 @offset_mmd_one_side: (@offset_mmd / 2);
 @offset_md_one_side: (@offset_md / 2);
+@offset_mdd_one_side: (@offset_mdd / 2);
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
 @offset_xxs_one_side: (@offset_xxs / 2);
 
 @fields: 0px;
 @fields_md: 15px;
+@fields_mdd: 15px;
 
 .wrapper-full(){
     padding-left: @fields;
@@ -31,6 +35,11 @@
     .md-block({
         padding-left: @fields_md;
         padding-right: @fields_md;
+    });
+
+    .mdd-block({
+        padding-left: @fields_mdd;
+        padding-right: @fields_mdd;
     });
 }
 
@@ -95,6 +104,10 @@
 
 .size-md(@n){
     .md(width, @atom * @n - @offset_md);
+}
+
+.size-mdd(@n){
+    .mdd(width, @atom * @n - @offset_mdd);
 }
 
 .size-sm(@n){
@@ -185,6 +198,32 @@
 
 .shift-md-padding-right(@n){
     .md(padding-right, @atom * @n + @offset_md_one_side);
+}
+
+.shift-mdd(@n){
+    .mdd(margin-left, @atom * @n + @offset_mdd_one_side);
+    .mdd(margin-right, @atom * @n + @offset_mdd_one_side);
+}
+
+.shift-mdd-left(@n){
+    .mdd(margin-left, @atom * @n + @offset_mdd_one_side);
+}
+
+.shift-mdd-right(@n){
+    .mdd(margin-right, @atom * @n + @offset_mdd_one_side);
+}
+
+.shift-mdd-padding(@n){
+    .mdd(padding-left, @atom * @n + @offset_mdd_one_side);
+    .mdd(padding-right, @atom * @n + @offset_mdd_one_side);
+}
+
+.shift-mdd-padding-left(@n){
+    .mdd(padding-left, @atom * @n + @offset_mdd_one_side);
+}
+
+.shift-mdd-padding-right(@n){
+    .mdd(padding-right, @atom * @n + @offset_mdd_one_side);
 }
 
 .shift-sm(@n){
@@ -285,6 +324,18 @@
 
 .md-block(@content){
     @media screen and (max-width: @break_md){
+        @content();
+    }
+}
+
+.mdd(@name, @value){
+    @media screen and (max-width: @break_mdd){
+        @{name}: @value;
+    }
+}
+
+.mdd-block(@content){
+    @media screen and (max-width: @break_mdd){
         @content();
     }
 }

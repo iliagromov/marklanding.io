@@ -6,17 +6,17 @@
     &__content{
         position: relative;
         .size(5.4);
+        .size-md(12);
         height: 100%;
         &-text{
             .size(12);
            
-            // background-color: @color_grayDark;
             position: relative;
+            z-index: 10;
             height: 100%;
-            // padding: 174px 0 0 170px;
             padding: 8% 0 12% 27%;
+            .md(padding, 0% 0 40% 11%);
             box-sizing: border-box;
-            //fixme margin padding
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -24,8 +24,6 @@
                 align-self: flex-end;
                 margin-bottom: 6%;
                 .size(12);
-                // margin: 38% 0 5%;
-                // .size(20);
             }
             .page__text{
                 .size(8);
@@ -33,13 +31,12 @@
                
                 font-family: '@{Roboto}-Regular';
 
-                font-size: 36px;
+                // font-size: 36px;
+                font-size: 1.84375vw;
+                .md(font-size, 1.84375vw * 2);
                 line-height: 148.9%;
                 letter-spacing: -0.01em;
-                
-                // width: 67%;
                 margin-bottom: -6%;
-                
                 padding-left: 5px;
                 box-sizing: border-box;
             }
@@ -48,34 +45,51 @@
             position: absolute;
             height: 100%;
             transition: all 1s ease-out;
+            &-grayDark{
+                .size-mdd(6.5);
+                width: 0;
+                background-color: @color_grayDark;
+            }
             &-grayLight{
-                .size(7);
+                .size-mdd(7);
+                width: 0;
                 right:0;
                 background-color: @color_grayLight;
             }
-            &-grayDark{
-                .size(6.5);
-                background-color: @color_grayDark;
-            }
+           
         }
     }
     &__bg{
         
         .size(9.1);
+        .size-md(12);
         .shift-left(-2.5);
+        .shift-md-left(-12);
         .shift-right(-1);
         .shift-padding-left(3.2);
+        .shift-md-padding-left(4.8);
+        .shift-xs-padding-left(0);
         padding-top: 1%;
-        background-image: url('../assets/img/img-banner-bg.png');
+        
+        .md-block({
+            padding-top: 38%;
+            background-image: url('../assets/img/img-banner-bg.png');
+        });
+        .xs-block({
+            padding-top: 85%;
+        });
         background-repeat: no-repeat;
         background-size: cover;
+        
+        // background-position: -25px -15px;
         display: flex;
         align-items: center;
-        // justify-content: center;
         box-sizing: border-box;
         .page__img{
             position: relative;
-            // width: 55%;
+            .mmd-block({
+                transform: scale(.8);
+            });
             img{   
                 position: relative;
                 z-index: 10;
@@ -88,8 +102,58 @@
                 top: 20%;
                 left: 20%;
                 background-color: @color_grayDark;
+                .from(@break_md,{
+                    opacity: 0;
+                });
             }
         }
-        // background-position: -25px -15px;
+    }
+    &_parallax{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .from(@break_md+1px,{
+            background-image: url('../assets/img/img-banner-bg.png');
+        });
+    }
+    &.animated{
+        .from(@break_md, {
+            .banner__content_bg{
+                &-grayDark{
+                    .size(6.5);
+                }
+                &-grayLight{
+                    .size(7);
+                }
+            }
+            .page__title-h1,
+            .page__text{
+                .animated({
+                    .fadeInLeft();
+                    .delay(.5s);
+                },2s);
+            }
+            .page__text{
+                .delay(.8s);
+            }
+            .page__img{
+                .animated({
+                    .zoomIn();
+                },2s);
+                &::after{
+                    .animated({
+                        .fadeIn();
+                        .delay(.6s);
+                    },2s);
+                }
+            }
+        });
+        
     }
 }

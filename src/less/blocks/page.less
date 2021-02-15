@@ -3,25 +3,28 @@
         &-h1{
             font-family:'@{Roboto}-Black';
             font-style: normal;
-            // font-size: 75px;
             font-weight: 900;
-            // font-size: 70px;
-            font-size: 3.6vw;
-            line-height: 121.18%; // 91px or 9vh;
+            font-size: 3.4vw;
+            line-height: 121.18%;
             letter-spacing: -0.025em;
 
             color: @color_white;
+            .md-block({
+                font-size: 3.4vw * 2;
+            });
+            .xs-block({
+                font-size: 3.4vw * 3;
+            });
         }
         &-h2{
             font-family: @fontBold;
             font-weight: bold;
-            // font-size: 144px;
-            // font-size: 7.5vw;
-            // font-size: 96px;
-            font-size: 5vw;
+            font-size: 4.4vw;
+            .md-block({
+                font-size: 4.4vw * 1.5;
+            });
             line-height: 121.18%;
            
-            /* identical to box height, or 175px */
             
             letter-spacing: -0.025em;
             text-transform: uppercase;
@@ -29,29 +32,24 @@
         &-h3{
             font-family:'@{Roboto}-Black';
             font-weight: bold;
-            // font-size: 42px;
-            // font-size: 2.2vw;
-            // line-height: 121.18%;
-            /* identical to box height, or 51px */
-
-            // letter-spacing: -0.005em;
-            // letter-spacing: 1.5px;
             letter-spacing: -0.005em;
             font-weight: 900;
-            // font-size: 48px;
-            font-size: 2.5vw;
+            font-size: 2.3vw;
+            .sm-block({
+                font-size: 2.3vw * 1.5;
+            });
+            .xs-block({
+                font-size: 2.3vw * 3;
+            });
             line-height: 121.18%;
-            /* or 58px */
 
             letter-spacing: -0.025em;
         }
         &-h4{
             font-family: @fontBold;
             font-weight: bold;
-            // font-size: 18px;
             font-size: .95vw;
             line-height: 148.9%;
-            /* or 27px */
             letter-spacing: -0.01em;
 
         }
@@ -61,14 +59,14 @@
     &__subtitle{
         font-family:'@{Roboto}-Regular';
         font-weight: 100;
-        // font-size: 32px;
-        // line-height: 44px;
-        // font-size: 1.7vw;
-        // line-height: 136%;
-        // font-size: 36px;
-        font-size: 1.9vw;
+        font-size: 1.6vw;
+        .sm-block({
+            font-size: 1.6vw * 1.5;
+        });
+        .xs-block({
+            font-size: 1.6vw * 3;
+        });
         line-height: 148.9%;
-        /* or 54px */
 
         letter-spacing: -0.01em;
 
@@ -87,6 +85,7 @@
     &__link{
         font-weight: normal;
         font-size: 0.9vw;
+        .xs(font-size, 0.9vw * 4);
         display: flex;
         align-items: center;
         // font-size: 16px;
@@ -109,11 +108,6 @@
                     .sprite(@icon-arrow-green);
                 }
             }
-            &-gray{
-                &::after{
-                    // .sprite(@icon-arrow-gray);
-                }
-            }
         }
         &:hover{
             text-decoration: underline;
@@ -127,35 +121,34 @@
                 margin-right: 9px;
             }
         }
-        &_phone{
-            &::before{
-                // .sprite(@icon-telephone);
-            }
-        }
-        &_fax{
-            &::before{
-                // .sprite(@icon-fax);
-            }
-        }
     }
     &__btn{
         border: none;
-        width: 243px;
-        height: 79px;
+        width: 13.820313vw;
+        // height: 79px;
+        height: 7.394737vh;
         display: flex;
         align-items: center;
         justify-content: center;
         color: @color_white;
         background:@color_grayDark;
+        border: 2px solid @color_grayDark;
         font-weight: bold;
         // font-size: 24px;
         font-size: 1.2vw;
+        .md(font-size, 1.8vw);
         line-height: 148.9%;
+        transition: all .5s ease-out;
+        
         &:active{
             background-color:@color_grayDark3;
         }
+        &:hover{
+            color: @color_grayDark;
+            background:transparent;
+        }
         &_play{
-
+            border: none;
         }
     }
     &__icon{
