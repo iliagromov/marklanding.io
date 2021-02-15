@@ -1833,6 +1833,10 @@ video {
     font-size: 3.6vw;
   }
 
+  .page__btn_play {
+    width: 96.9%;
+  }
+
   .header .header__title {
     left: 4%;
     font-size: 4vw;
